@@ -1,0 +1,21 @@
+.post_main {
+  max-width: 500px;
+  border: solid 1px #bbb;
+  margin-bottom: 10px;
+}
+.post_header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.post_header h3 {
+  margin-left: 5px;
+}
+.post_image {
+  object-fit: contain;
+  width: 100%;
+}
+.post_caption {
+  font-weight: normal;
+  padding: 10px;
+}
