@@ -1,14 +1,44 @@
-.header {
-  position: sticky;
-  background-color: #fafafa;
-  top: 0;
-  display: flex;
-  padding: 10px;
-  justify-content: space-between;
-  z-index: 10;
-  align-items: center;
+.header{
+    position: sticky;
+    background-color: #f0f5f9;
+    top:0;
+    display: flex;
+    padding:10px;
+    justify-content: space-between;
+    z-index: 10;
+    align-items: center;
+    margin-bottom: 20px;
 }
-.header_user_section {
-  position: fixed;
-  right: 20px;
+.header_user_section{
+    position: fixed;
+    right:20px;
+    display: flex;
+    gap: 20px;
+}
+.header_user_section .header_avatar{
+    cursor: pointer;
+}
+.post_avatar_color{
+ background-color: #112d4e!important;
+}
+.user_avatar_color{
+ background-color: #2d4059!important;
+}
+.header_logo{
+    height: 60px;
+}
+.header_logo img{
+    object-fit: contain;
+    height: 100%;
+} 
+.header__login__btn{
+    background-color: #ffd460 !important;
+}
+
+@media only screen and (max-width:600px){
+
+.header_logo img{
+    object-fit: contain;
+    width: 120px;
+} 
 }

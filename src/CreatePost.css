@@ -1,0 +1,17 @@
+.craetePost_previw{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.craetePost_previw img{
+  width: 100%;
+  object-fit: contain;
+}
+.uploadBtnCenter{
+display:flex;
+justify-content: center;
+}
+.uploadBtnRight{
+  display:flex;
+  justify-content: flex-end;
+}

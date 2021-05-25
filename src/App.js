@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-
-import { auth } from "./FirebaseConfig";
-
-import Login from "./Login";
 import Home from "./Home";
+import Login from "./Login";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { auth } from "./FirebaseConfig";
 import SignUp from "./SignUp";
-
 const App = () => {
   const [username, setUsername] = useState();
   const [user, setUser] = useState();
@@ -27,7 +24,7 @@ const App = () => {
             <Home user={user} />
           </Route>
           <Route exact path="/login">
-            <Login />
+            <Login isUser={isUser} />
           </Route>
           <Route exact path="/signup">
             <SignUp isUser={isUser} />

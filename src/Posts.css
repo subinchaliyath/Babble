@@ -1,21 +1,22 @@
-.post_main {
-  max-width: 500px;
-  border: solid 1px #bbb;
-  margin-bottom: 10px;
+.post_main{
+    width:clamp(320px,100vw,500px);
+    box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+    margin-bottom: 20px;
+    background-color: #fff;
 }
-.post_header {
-  display: flex;
-  align-items: center;
-  padding: 10px;
+.post_header{
+    display: flex;
+    align-items: center;
+    padding: 10px;
 }
-.post_header h3 {
-  margin-left: 5px;
+.post_header h3{
+    margin-left: 5px;
 }
-.post_image {
-  object-fit: contain;
-  width: 100%;
+.post_image{
+    object-fit: contain;
+    width: 100%;
 }
-.post_caption {
-  font-weight: normal;
-  padding: 10px;
+.post_caption{
+    font-weight: normal;
+    padding: 10px;
 }

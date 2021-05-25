@@ -11,7 +11,7 @@ import Container from "@material-ui/core/Container";
 import { auth } from "./FirebaseConfig";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
-import Spinner from "./Spinner";
+import Spinner from './Spinner'
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(8),
@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const SignUp = ({ isUser }) => {
+function SignUp({ isUser }) {
   let history = useHistory();
   const classes = useStyles();
   const [username, setUsername] = useState();
@@ -41,29 +41,30 @@ const SignUp = ({ isUser }) => {
   const [loading, setLoading] = useState(false);
   const handleSignup = async (e) => {
     e.preventDefault();
-    setLoading(true);
-    try {
-      await auth
-        .createUserWithEmailAndPassword(email, password)
-        .then((authUser) => {
-          return authUser.user.updateProfile({
-            displayName: username,
-          });
-        })
-        .catch((err) => {
-          throw err;
+    setLoading(true)
+    try{
+    await auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((authUser) => {
+        return authUser.user.updateProfile({
+          displayName: username,
         });
-      isUser(username);
-      setLoading(false);
-      history.push("/");
-    } catch (error) {
-      setLoading(false);
-      alert(error.message);
+      })
+      .catch((err) => {
+          throw(err);
+        });
+        isUser(username);
+        setLoading(false)
+        history.push("/");
+    }
+    catch(error){
+        setLoading(false)
+        alert(error.message)
     }
   };
   return (
     <div>
-      {loading ? <Spinner /> : null}
+    
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <div className={classes.paper}>
@@ -106,6 +107,7 @@ const SignUp = ({ isUser }) => {
               id="password"
               onChange={(e) => setPassword(e.target.value)}
             />
+            {loading?<Spinner/>:
             <Button
               type="submit"
               fullWidth
@@ -114,7 +116,7 @@ const SignUp = ({ isUser }) => {
               className={classes.submit}
             >
               Sign Up
-            </Button>
+            </Button>}
             <Grid container>
               <Grid item>
                 <Link to="/login" variant="body2">
@@ -127,6 +129,6 @@ const SignUp = ({ isUser }) => {
       </Container>
     </div>
   );
-};
+}
 
 export default SignUp;
