@@ -17,7 +17,7 @@ function CreatePost({showModal,user}) {
     const [progress, setProgress]=useState(0)
     const [caption, setCaption] = useState()
     const [image, setImage] = useState()
-    const [error,setError] = useState()
+    const [error,setError] = useState("")
     const [loading,setLoading] = useState(false)
     const handlePost = () =>{
         if(caption && image){
