@@ -25,10 +25,10 @@ function CreatePost({showModal,user}) {
             const uploadTask = storage.ref(`post_images/${image.name}`).put(image)
             uploadTask.on('state_changed', 
                 (snapshot)=>{
-                    const progress = Math.round(
+                    const percentage = Math.round(
                         (snapshot.bytesTransferred/snapshot.totalBytes)*100
                     )
-                    setProgress(progress)
+                    setProgress(progress+percentage)
                 }, 
                 (error) => {
                     alert(error.message)
