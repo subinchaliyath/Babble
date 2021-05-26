@@ -12,7 +12,7 @@
 /build
 
 # misc
-FirebaseConfig.js
+# FirebaseConfig.js
 .DS_Store
 .env.local
 .env.development.local
