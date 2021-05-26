@@ -29,6 +29,7 @@ function Home({user}) {
         <Spinner/>
       </div>:
       <div className="home_main">
+        Test
         {posts.length > 0 &&
           posts.map(({ post, id }) => (
             <div className="home_posts_container" key={id}>
