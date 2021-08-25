@@ -1,0 +1,29 @@
+.profile_details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  margin-top:30px;
+}
+.profile_details .MuiAvatar-root {
+  width: 150px;
+  height: 150px;
+}
+.profile_name{
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+.profile_hr{
+ margin:30px 20px;
+}
+.profile_avatar{
+  position:relative;
+}
+.profile_details button{
+  position: absolute;
+  left: 95%;
+  top: 92%;
+  transform: translate(-50%,-50%);
+}

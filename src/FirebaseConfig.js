@@ -6,7 +6,7 @@ const firebaseConfig = {
   storageBucket: "insta-babble.appspot.com",
   messagingSenderId: "748212509357",
   appId: "1:748212509357:web:f89a3c55fc60c97b5d4424"
-};
+}
 
 const app = firebase.initializeApp(firebaseConfig);
 
